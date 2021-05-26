@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v-next]
 ### Fixed
 - Repr-output of ProcessDataCollection
+- get_process_data_values and get_setting_values accept now iterables
 
 ## [1.0.0]
 ### Fixed

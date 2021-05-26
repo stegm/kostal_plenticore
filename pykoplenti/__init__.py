@@ -702,7 +702,7 @@ class ApiClient(contextlib.AbstractAsyncContextManager):
             # get multiple process data of multiple modules
             request = []
             for mid, pids in module_id.items():
-                request.append(dict(moduleid=mid, processdataids=pids))
+                request.append(dict(moduleid=mid, processdataids=list(pids)))
 
             async with self._session_request(
                 "processdata", method="POST", json=request
@@ -771,7 +771,7 @@ class ApiClient(contextlib.AbstractAsyncContextManager):
             # get multiple process data of multiple modules
             request = []
             for mid, pids in module_id.items():
-                request.append(dict(moduleid=mid, settingids=pids))
+                request.append(dict(moduleid=mid, settingids=list(pids)))
 
             async with self._session_request(
                 "settings", method="POST", json=request
