@@ -164,7 +164,7 @@ class ProcessDataCollection(Mapping):
             raise KeyError(item)
 
     def __repr__(self):
-        return self._raw
+        return dumps(self._raw)
 
 
 class SettingsData:
